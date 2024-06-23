@@ -1,0 +1,784 @@
+{
+  "onion": {
+    "raw": {
+      "benefits": [
+        "High in vitamins and minerals like vitamin C, vitamin B6, and potassium.",
+        "Contains antioxidants that help reduce inflammation and support heart health."
+      ],
+      "image_url": "https://example.com/onion.jpg"
+    },
+    "boiled": {
+      "benefits": [
+        "Maintains nutrient content with reduced pungency.",
+        "Easier digestion compared to raw onions."
+      ],
+      "image_url": "https://example.com/onion.jpg"
+    },
+    "fried": {
+      "benefits": [
+        "Adds flavor and texture to dishes.",
+        "May have reduced nutrient content due to frying process."
+      ],
+      "image_url": "https://example.com/onion.jpg"
+    }
+  },
+  "tomato": {
+    "raw": {
+      "benefits": [
+        "Rich in antioxidants like lycopene, which may reduce the risk of certain cancers.",
+        "Good source of vitamins C, K, and potassium."
+      ],
+      "image_url": "https://example.com/tomato.jpg"
+    },
+    "boiled": {
+      "benefits": [
+        "Enhances lycopene bioavailability.",
+        "Retains vitamin C content."
+      ],
+      "image_url": "https://example.com/tomato.jpg"
+    },
+    "fried": {
+      "benefits": [
+        "Adds flavor and texture to dishes.",
+        "May have reduced nutrient content due to frying process."
+      ],
+      "image_url": "https://example.com/tomato.jpg"
+    }
+  },
+  "carrot": {
+    "raw": {
+      "benefits": [
+        "High in beta-carotene, which is converted into vitamin A in the body.",
+        "Good source of fiber, vitamins C and K, and potassium."
+      ],
+      "image_url": "https://example.com/carrot.jpg"
+    },
+    "boiled": {
+      "benefits": [
+        "Maintains nutrient content with softer texture.",
+        "Easier to digest compared to raw carrots."
+      ],
+      "image_url": "https://example.com/carrot.jpg"
+    },
+    "fried": {
+      "benefits": [
+        "Enhances flavor and caramelizes natural sugars.",
+        "May have reduced nutrient content due to frying process."
+      ],
+      "image_url": "https://example.com/carrot.jpg"
+    }
+  },
+  "cucumber": {
+    "raw": {
+      "benefits": [
+        "High water content helps in hydration.",
+        "Provides vitamins K and C, and potassium."
+      ],
+      "image_url": "https://example.com/cucumber.jpg"
+    },
+    "boiled": {
+      "benefits": [
+        "Softens texture and enhances digestibility.",
+        "Retains water-soluble vitamins and minerals."
+      ],
+      "image_url": "https://example.com/cucumber.jpg"
+    },
+    "fried": {
+      "benefits": [
+        "Adds crunch and flavor to dishes.",
+        "May lose water-soluble nutrients."
+      ],
+      "image_url": "https://example.com/cucumber.jpg"
+    }
+  },
+  "potato": {
+    "raw": {
+      "benefits": [
+        "Good source of vitamins C and B6, potassium, and fiber.",
+        "Provides energy and supports muscle function."
+      ],
+      "image_url": "https://example.com/potato.jpg"
+    },
+    "boiled": {
+      "benefits": [
+        "Softens texture and enhances digestibility.",
+        "Retains water-soluble vitamins and minerals."
+      ],
+      "image_url": "https://example.com/potato.jpg"
+    },
+    "fried": {
+      "benefits": [
+        "Adds crispy texture and flavor to dishes.",
+        "May lose some water-soluble nutrients."
+      ],
+      "image_url": "https://example.com/potato.jpg"
+    }
+  },
+  "sweet potato": {
+    "raw": {
+      "benefits": [
+        "Rich in beta-carotene, vitamins A and C, and fiber.",
+        "Supports eye health and immune function."
+      ],
+      "image_url": "https://example.com/sweet_potato.jpg"
+    },
+    "boiled": {
+      "benefits": [
+        "Softens texture and enhances digestibility.",
+        "Retains water-soluble vitamins and minerals."
+      ],
+      "image_url": "https://example.com/sweet_potato.jpg"
+    },
+    "fried": {
+      "benefits": [
+        "Adds sweet flavor and crispy texture to dishes.",
+        "May lose some water-soluble nutrients."
+      ],
+      "image_url": "https://example.com/sweet_potato.jpg"
+    }
+  },
+  "eggplant": {
+    "raw": {
+      "benefits": [
+        "Rich in fiber, vitamins C and K, and antioxidants.",
+        "Supports heart health and aids digestion."
+      ],
+      "image_url": "https://example.com/eggplant.jpg"
+    },
+    "boiled": {
+      "benefits": [
+        "Softens texture and enhances digestibility.",
+        "Retains water-soluble vitamins and minerals."
+      ],
+      "image_url": "https://example.com/eggplant.jpg"
+    },
+    "fried": {
+      "benefits": [
+        "Adds savory flavor and tender texture to dishes.",
+        "May lose some water-soluble nutrients."
+      ],
+      "image_url": "https://example.com/eggplant.jpg"
+    }
+  },
+  "cabbage": {
+    "raw": {
+      "benefits": [
+        "Rich in vitamins C and K, and fiber.",
+        "Contains antioxidants that support immune health."
+      ],
+      "image_url": "https://example.com/cabbage.jpg"
+    },
+    "boiled": {
+      "benefits": [
+        "Softens texture and reduces pungency.",
+        "Retains water-soluble vitamins and minerals."
+      ],
+      "image_url": "https://example.com/cabbage.jpg"
+    },
+    "fried": {
+      "benefits": [
+        "Adds crispy texture and savory flavor to dishes.",
+        "May lose some water-soluble nutrients."
+      ],
+      "image_url": "https://example.com/cabbage.jpg"
+    }
+  },
+  "cauliflower": {
+    "raw": {
+      "benefits": [
+        "Rich in vitamins C and K, and folate.",
+        "Contains antioxidants with anti-inflammatory properties."
+      ],
+      "image_url": "https://example.com/cauliflower.jpg"
+    },
+    "boiled": {
+      "benefits": [
+        "Softens texture and enhances digestibility.",
+        "Retains water-soluble vitamins and minerals."
+      ],
+      "image_url": "https://example.com/cauliflower.jpg"
+    },
+    "fried": {
+      "benefits": [
+        "Adds crunchy texture and mild flavor to dishes.",
+        "May lose some water-soluble nutrients."
+      ],
+      "image_url": "https://example.com/cauliflower.jpg"
+    }
+  },
+  "celery": {
+    "raw": {
+      "benefits": [
+        "Low in calories and high in water, aiding in hydration.",
+        "Provides vitamins A, K, and folate."
+      ],
+      "image_url": "https://example.com/celery.jpg"
+    },
+    "boiled": {
+      "benefits": [
+        "Softens texture and reduces bitterness.",
+        "Retains water-soluble vitamins and minerals."
+      ],
+      "image_url": "https://example.com/celery.jpg"
+    },
+    "fried": {
+      "benefits": [
+        "Adds crunch and flavor to dishes.",
+        "May lose some water-soluble nutrients."
+      ],
+      "image_url": "https://example.com/celery.jpg"
+    }
+  },
+  "mushroom": {
+    "raw": {
+      "benefits": [
+        "Low in calories and fat, high in fiber and vitamins.",
+        "Contains antioxidants that support immune health."
+      ],
+      "image_url": "https://example.com/mushroom.jpg"
+    },
+    "boiled": {
+      "benefits": [
+        "Softens texture and enhances digestibility.",
+        "Retains water-soluble vitamins and minerals."
+      ],
+      "image_url": "https://example.com/mushroom.jpg"
+    },
+    "fried": {
+      "benefits": [
+        "Adds savory flavor and meaty texture to dishes.",
+        "May lose some water-soluble nutrients."
+      ],
+      "image_url": "https://example.com/mushroom.jpg"
+    }
+  },
+  "peas": {
+    "raw": {
+      "benefits": [
+        "Good source of protein, fiber, vitamins A, C, and K.",
+        "Contains antioxidants that support heart health."
+      ],
+      "image_url": "https://example.com/peas.jpg"
+    },
+    "boiled": {
+      "benefits": [
+        "Softens texture and enhances digestibility.",
+        "Retains water-soluble vitamins and minerals."
+      ],
+      "image_url": "https://example.com/peas.jpg"
+    },
+    "fried": {
+      "benefits": [
+        "Adds sweet flavor and crunchy texture to dishes.",
+        "May lose some water-soluble nutrients."
+      ],
+      "image_url": "https://example.com/peas.jpg"
+    }
+  },
+  "green beans": {
+    "raw": {
+      "benefits": [
+        "Good source of vitamins C, K, and folate.",
+        "Contains antioxidants that promote heart health."
+      ],
+      "image_url": "https://example.com/green_beans.jpg"
+    },
+    "boiled": {
+      "benefits": [
+        "Softens texture and enhances digestibility.",
+        "Retains water-soluble vitamins and minerals."
+      ],
+      "image_url": "https://example.com/green_beans.jpg"
+    },
+    "fried": {
+      "benefits": [
+        "Adds crunchy texture and savory flavor to dishes.",
+        "May lose some water-soluble nutrients."
+      ],
+      "image_url": "https://example.com/green_beans.jpg"
+    }
+  },
+  "asparagus": {
+    "raw": {
+      "benefits": [
+        "High in vitamins A, C, and K, and folate.",
+        "Contains antioxidants that support brain health."
+      ],
+      "image_url": "https://example.com/asparagus.jpg"
+    },
+    "boiled": {
+      "benefits": [
+        "Softens texture and enhances digestibility.",
+        "Retains water-soluble vitamins and minerals."
+      ],
+      "image_url": "https://example.com/asparagus.jpg"
+    },
+    "fried": {
+      "benefits": [
+        "Adds nutty flavor and crispy texture to dishes.",
+        "May lose some water-soluble nutrients."
+      ],
+      "image_url": "https://example.com/asparagus.jpg"
+    }
+  },
+  "radish": {
+    "raw": {
+      "benefits": [
+        "Low in calories, high in fiber, vitamins C and K.",
+        "Contains compounds that support digestion and heart health."
+      ],
+      "image_url": "https://example.com/radish.jpg"
+    },
+    "boiled": {
+      "benefits": [
+        "Softens texture and reduces pungency.",
+        "Retains water-soluble vitamins and minerals."
+      ],
+      "image_url": "https://example.com/radish.jpg"
+    },
+    "fried": {
+      "benefits": [
+        "Adds crunchy texture and mild flavor to dishes.",
+        "May lose some water-soluble nutrients."
+      ],
+      "image_url": "https://example.com/radish.jpg"
+    }
+  },
+  "pumpkin": {
+    "raw": {
+      "benefits": [
+        "Rich in vitamins A and C, and potassium.",
+        "Contains antioxidants that support eye health."
+      ],
+      "image_url": "https://example.com/pumpkin.jpg"
+    },
+    "boiled": {
+      "benefits": [
+        "Softens texture and enhances digestibility.",
+        "Retains water-soluble vitamins and minerals."
+      ],
+      "image_url": "https://example.com/pumpkin.jpg"
+    },
+    "fried": {
+      "benefits": [
+        "Adds sweet flavor and tender texture to dishes.",
+        "May lose some water-soluble nutrients."
+      ],
+      "image_url": "https://example.com/pumpkin.jpg"
+    }
+  },
+  "corn": {
+    "raw": {
+      "benefits": [
+        "Good source of fiber, vitamins B and C, and antioxidants.",
+        "Supports digestive health and provides energy."
+      ],
+      "image_url": "https://example.com/corn.jpg"
+    },
+    "boiled": {
+      "benefits": [
+        "Softens texture and enhances digestibility.",
+        "Retains water-soluble vitamins and antioxidants."
+      ],
+      "image_url": "https://example.com/corn.jpg"
+    },
+    "fried": {
+      "benefits": [
+        "Adds crunchy texture and sweet flavor to dishes.",
+        "May lose some water-soluble nutrients."
+      ],
+      "image_url": "https://example.com/corn.jpg"
+    }
+  },
+  "garlic": {
+    "raw": {
+      "benefits": [
+        "Rich in vitamins C and B6, and manganese.",
+        "Contains compounds that support immune health."
+      ],
+      "image_url": "https://example.com/garlic.jpg"
+    },
+    "boiled": {
+      "benefits": [
+        "Reduces pungency and enhances digestibility.",
+        "Retains antioxidant properties."
+      ],
+      "image_url": "https://example.com/garlic.jpg"
+    },
+    "fried": {
+      "benefits": [
+        "Adds savory flavor and aroma to dishes.",
+        "May lose some water-soluble nutrients."
+      ],
+      "image_url": "https://example.com/garlic.jpg"
+    }
+  },
+  "beetroot": {
+    "raw": {
+      "benefits": [
+        "Rich in vitamins A, C, and B6, and iron.",
+        "Contains antioxidants that support liver health."
+      ],
+      "image_url": "https://example.com/beetroot.jpg"
+    },
+    "boiled": {
+      "benefits": [
+        "Softens texture and reduces earthy flavor.",
+        "Retains water-soluble vitamins and minerals."
+      ],
+      "image_url": "https://example.com/beetroot.jpg"
+    },
+    "fried": {
+      "benefits": [
+        "Adds sweet flavor and crispy texture to dishes.",
+        "May lose some water-soluble nutrients."
+      ],
+      "image_url": "https://example.com/beetroot.jpg"
+    }
+  },
+  "ginger": {
+    "raw": {
+      "benefits": [
+        "Anti-inflammatory properties.",
+        "Aids digestion and supports immune health."
+      ],
+      "image_url": "https://example.com/ginger.jpg"
+    },
+    "boiled": {
+      "benefits": [
+        "Softens texture and reduces spiciness.",
+        "Retains antioxidant properties."
+      ],
+      "image_url": "https://example.com/ginger.jpg"
+    },
+    "fried": {
+      "benefits": [
+        "Adds spicy flavor and aromatic profile to dishes.",
+        "May lose some water-soluble nutrients."
+      ],
+      "image_url": "https://example.com/ginger.jpg"
+    }
+  },
+  "leek": {
+    "raw": {
+      "benefits": [
+        "Contains vitamins A, C, and K, and folate.",
+        "Supports heart health and aids digestion."
+      ],
+      "image_url": "https://example.com/leek.jpg"
+    },
+    "boiled": {
+      "benefits": [
+        "Softens texture and enhances digestibility.",
+        "Retains vitamins and minerals."
+      ],
+      "image_url": "https://example.com/leek.jpg"
+    },
+    "fried": {
+      "benefits": [
+        "Adds sweet flavor and crispy texture to dishes.",
+        "May lose some water-soluble nutrients."
+      ],
+      "image_url": "https://example.com/leek.jpg"
+    }
+  },
+  "artichoke": {
+    "raw": {
+      "benefits": [
+        "Rich in fiber, vitamins C and K, and folate.",
+        "Contains antioxidants that support liver health."
+      ],
+      "image_url": "https://example.com/artichoke.jpg"
+    },
+    "boiled": {
+      "benefits": [
+        "Softens texture and enhances digestibility.",
+        "Retains water-soluble vitamins and minerals."
+      ],
+      "image_url": "https://example.com/artichoke.jpg"
+    },
+    "fried": {
+      "benefits": [
+        "Adds crispy texture and nutty flavor to dishes.",
+        "May lose some water-soluble nutrients."
+      ],
+      "image_url": "https://example.com/artichoke.jpg"
+    }
+  },
+  "kale": {
+    "raw": {
+      "benefits": [
+        "Rich in vitamins A, C, and K, and antioxidants.",
+        "Supports eye health and has anti-inflammatory properties."
+      ],
+      "image_url": "https://example.com/kale.jpg"
+    },
+    "boiled": {
+      "benefits": [
+        "Softens texture and reduces bitterness.",
+        "Retains water-soluble vitamins and minerals."
+      ],
+      "image_url": "https://example.com/kale.jpg"
+    },
+    "fried": {
+      "benefits": [
+        "Adds crunchy texture and savory flavor to dishes.",
+        "May lose some water-soluble nutrients."
+      ],
+      "image_url": "https://example.com/kale.jpg"
+    }
+  },
+  "parsley": {
+    "raw": {
+      "benefits": [
+        "Rich in vitamins A, C, and K, and antioxidants.",
+        "Supports bone health and aids digestion."
+      ],
+      "image_url": "https://example.com/parsley.jpg"
+    },
+    "boiled": {
+      "benefits": [
+        "Softens texture and reduces bitterness.",
+        "Retains water-soluble vitamins and minerals."
+      ],
+      "image_url": "https://example.com/parsley.jpg"
+    },
+    "fried": {
+      "benefits": [
+        "Adds fresh flavor and aroma to dishes.",
+        "May lose water-soluble nutrients."
+      ],
+      "image_url": "https://example.com/parsley.jpg"
+    }
+  },
+  "turnip": {
+    "raw": {
+      "benefits": [
+        "Low in calories, high in fiber, vitamins C and K.",
+        "Contains compounds that support liver health."
+      ],
+      "image_url": "https://example.com/turnip.jpg"
+    },
+    "boiled": {
+      "benefits": [
+        "Softens texture and reduces bitterness.",
+        "Retains water-soluble vitamins and minerals."
+      ],
+      "image_url": "https://example.com/turnip.jpg"
+    },
+    "fried": {
+      "benefits": [
+        "Adds sweet flavor and crispy texture to dishes.",
+        "May lose water-soluble nutrients."
+      ],
+      "image_url": "https://example.com/turnip.jpg"
+    }
+  },
+  "beet": {
+    "raw": {
+      "benefits": [
+        "Rich in vitamins A, C, and B6, and iron.",
+        "Contains antioxidants that support liver health."
+      ],
+      "image_url": "https://example.com/beet.jpg"
+    },
+    "boiled": {
+      "benefits": [
+        "Softens texture and reduces earthy flavor.",
+        "Retains water-soluble vitamins and minerals."
+      ],
+      "image_url": "https://example.com/beet.jpg"
+    },
+    "fried": {
+      "benefits": [
+        "Adds sweet flavor and crispy texture to dishes.",
+        "May lose water-soluble nutrients."
+      ],
+      "image_url": "https://example.com/beet.jpg"
+    }
+  },
+  "bell pepper": {
+    "raw": {
+      "benefits": [
+        "High in vitamins A, C, and B6.",
+        "Contains antioxidants that support eye health."
+      ],
+      "image_url": "https://example.com/bell_pepper.jpg"
+    },
+    "boiled": {
+      "benefits": [
+        "Softens texture and enhances digestibility.",
+        "Retains water-soluble vitamins and minerals."
+      ],
+      "image_url": "https://example.com/bell_pepper.jpg"
+    },
+    "fried": {
+      "benefits": [
+        "Adds sweet flavor and texture to dishes.",
+        "May lose water-soluble nutrients."
+      ],
+      "image_url": "https://example.com/bell_pepper.jpg"
+    }
+  },
+  "chili pepper": {
+    "raw": {
+      "benefits": [
+        "Rich in vitamins A and C, and capsaicin.",
+        "Contains antioxidants that support metabolism."
+      ],
+      "image_url": "https://example.com/chili_pepper.jpg"
+    },
+    "boiled": {
+      "benefits": [
+        "Softens texture and reduces spiciness.",
+        "Retains antioxidant properties."
+      ],
+      "image_url": "https://example.com/chili_pepper.jpg"
+    },
+    "fried": {
+      "benefits": [
+        "Adds spicy flavor and aroma to dishes.",
+        "May lose water-soluble nutrients."
+      ],
+      "image_url": "https://example.com/chili_pepper.jpg"
+    }
+  },
+  "fennel": {
+    "raw": {
+      "benefits": [
+        "Rich in fiber, vitamins C and K, and antioxidants.",
+        "Supports digestion and has anti-inflammatory properties."
+      ],
+      "image_url": "https://example.com/fennel.jpg"
+    },
+    "boiled": {
+      "benefits": [
+        "Softens texture and reduces bitterness.",
+        "Retains water-soluble vitamins and minerals."
+      ],
+      "image_url": "https://example.com/fennel.jpg"
+    },
+    "fried": {
+      "benefits": [
+        "Adds aromatic flavor and crunch to dishes.",
+        "May lose water-soluble nutrients."
+      ],
+      "image_url": "https://example.com/fennel.jpg"
+    }
+  },
+  "green onion": {
+    "raw": {
+      "benefits": [
+        "Contains vitamins A, C, and K, and antioxidants.",
+        "Supports immune health and aids digestion."
+      ],
+      "image_url": "https://example.com/green_onion.jpg"
+    },
+    "boiled": {
+      "benefits": [
+        "Softens texture and reduces pungency.",
+        "Retains water-soluble vitamins and minerals."
+      ],
+      "image_url": "https://example.com/green_onion.jpg"
+    },
+    "fried": {
+      "benefits": [
+        "Adds mild flavor and texture to dishes.",
+        "May lose water-soluble nutrients."
+      ],
+      "image_url": "https://example.com/green_onion.jpg"
+    }
+  },
+  "spinach": {
+    "raw": {
+      "benefits": [
+        "Rich in vitamins A, C, and K, and iron.",
+        "Contains antioxidants that support heart health."
+      ],
+      "image_url": "https://example.com/spinach.jpg"
+    },
+    "boiled": {
+      "benefits": [
+        "Softens texture and reduces oxalates.",
+        "Retains water-soluble vitamins and minerals."
+      ],
+      "image_url": "https://example.com/spinach.jpg"
+    },
+    "fried": {
+      "benefits": [
+        "Adds crispy texture and savory flavor to dishes.",
+        "May lose some water-soluble nutrients."
+      ],
+      "image_url": "https://example.com/spinach.jpg"
+    }
+  },
+  "lettuce": {
+    "raw": {
+      "benefits": [
+        "High water content helps in hydration.",
+        "Rich in vitamins A, C, and K."
+      ],
+      "image_url": "https://example.com/lettuce.jpg"
+    },
+    "boiled": {
+      "benefits": [
+        "Softens texture and retains vitamins and minerals.",
+        "Water-soluble vitamins and some antioxidants are preserved."
+      ],
+      "image_url": "https://example.com/lettuce.jpg"
+    },
+    "fried": {
+      "benefits": [
+        "Adds crunch and texture to dishes.",
+        "May lose some water-soluble nutrients."
+      ],
+      "image_url": "https://example.com/lettuce.jpg"
+    }
+  },
+  "broccoli": {
+    "raw": {
+      "benefits": [
+        "Rich in vitamins C and K, and folate.",
+        "Contains antioxidants that support immune health."
+      ],
+      "image_url": "https://example.com/broccoli.jpg"
+    },
+    "boiled": {
+      "benefits": [
+        "Softens texture and reduces bitterness.",
+        "Retains water-soluble vitamins and minerals."
+      ],
+      "image_url": "https://example.com/broccoli.jpg"
+    },
+    "fried": {
+      "benefits": [
+        "Adds crispy texture and nutty flavor to dishes.",
+        "May lose some water-soluble nutrients."
+      ],
+      "image_url": "https://example.com/broccoli.jpg"
+    }
+  },
+  "zucchini": {
+    "raw": {
+      "benefits": [
+        "High in vitamins A, C, and K, and potassium.",
+        "Low in calories and supports digestive health."
+      ],
+      "image_url": "https://example.com/zucchini.jpg"
+    },
+    "boiled": {
+      "benefits": [
+        "Softens texture and enhances digestibility.",
+        "Retains water-soluble vitamins and minerals."
+      ],
+      "image_url": "https://example.com/zucchini.jpg"
+    },
+    "fried": {
+      "benefits": [
+        "Adds crispy texture and mild flavor to dishes.",
+        "May lose some water-soluble nutrients."
+      ],
+      "image_url": "https://example.com/zucchini.jpg"
+    }
+  }
+}

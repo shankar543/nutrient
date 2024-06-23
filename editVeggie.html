@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Vegetable Details</title>
+    <style>
+        /* Add your CSS styles here for layout and design */
+    </style>
+</head>
+<body>
+    <h1>Edit Vegetable Details</h1>
+
+    <!-- Search Bar -->
+    <input type="text" id="searchInput" placeholder="Search vegetables...">
+    <button onclick="searchVegetable()">Search</button>
+
+    <!-- Form to Edit Vegetable Details -->
+    <form id="editForm">
+        <label for="vegetableName">Vegetable Name:</label>
+        <input type="text" id="vegetableName" readonly>
+
+        <label for="rawBenefits">Raw Benefits:</label>
+        <textarea id="rawBenefits"></textarea>
+
+        <label for="boiledBenefits">Boiled Benefits:</label>
+        <textarea id="boiledBenefits"></textarea>
+
+        <label for="friedBenefits">Fried Benefits:</label>
+        <textarea id="friedBenefits"></textarea>
+
+        <label for="imageUrl">Image URL:</label>
+        <input type="text" id="imageUrl">
+
+        <button type="button" onclick="saveChanges()">Save Changes</button>
+    </form>
+
+    <!-- Button to Add New Vegetable -->
+    <button type="button" onclick="addNewVegetable()">Add New Vegetable</button>
+
+    <!-- Display Area for JSON Data -->
+    <div id="jsonDataDisplay"></div>
+
+    <script>
+        // Function to load vegetables data from server
+        async function loadVegetablesData() {
+            try {
+                const response = await fetch('http://localhost:3000/api/vegetables');
+                const data = await response.json();
+                return data;
+            } catch (error) {
+                console.error('Error fetching vegetables data:', error);
+                return null;
+            }
+        }
+
+        // Function to save vegetables data to server
+        async function saveVegetablesData(data) {
+            try {
+                const response = await fetch('/api/vegetables', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(data)
+                });
+                const result = await response.json();
+                console.log(result.message);
+            } catch (error) {
+                console.error('Error saving vegetables data:', error);
+            }
+        }
+
+        // Function to display vegetable details in the form
+        function displayVegetableDetails(vegetableName) {
+            const vegetable = vegetablesData[vegetableName];
+            document.getElementById('vegetableName').value = vegetableName;
+            document.getElementById('rawBenefits').value = vegetable.raw.benefits.join('\n');
+            document.getElementById('boiledBenefits').value = vegetable.boiled.benefits.join('\n');
+            document.getElementById('friedBenefits').value = vegetable.fried.benefits.join('\n');
+            document.getElementById('imageUrl').value = vegetable.raw.image_url;
+        }
+
+        // Function to save changes made to vegetable details
+        function saveChanges() {
+            const vegetableName = document.getElementById('vegetableName').value;
+            vegetablesData[vegetableName].raw.benefits = document.getElementById('rawBenefits').value.split('\n');
+            vegetablesData[vegetableName].boiled.benefits = document.getElementById('boiledBenefits').value.split('\n');
+            vegetablesData[vegetableName].fried.benefits = document.getElementById('friedBenefits').value.split('\n');
+            vegetablesData[vegetableName].raw.image_url = document.getElementById('imageUrl').value;
+            saveVegetablesData(vegetablesData);
+        }
+
+        // Function to search for a vegetable and display its details
+        function searchVegetable() {
+            const searchTerm = document.getElementById('searchInput').value.toLowerCase();
+            if (searchTerm.trim() === '') {
+                alert('Please enter a vegetable name to search.');
+                return;
+            }
+            if (vegetablesData.hasOwnProperty(searchTerm)) {
+                displayVegetableDetails(searchTerm);
+            } else {
+                alert('Vegetable not found.');
+            }
+        }
+
+        // Function to add a new vegetable
+        function addNewVegetable() {
+            const newVegetableName = prompt('Enter the name of the new vegetable:');
+            if (!newVegetableName) return; // Cancelled or empty input
+
+            // Initialize new vegetable structure
+            vegetablesData[newVegetableName] = {
+                raw: {
+                    benefits: [],
+                    image_url: ''
+                },
+                boiled: {
+                    benefits: [],
+                },
+                fried: {
+                    benefits: [],
+                }
+            };
+
+            // Display newly added vegetable details (you can choose to clear fields or not)
+            displayVegetableDetails(newVegetableName);
+
+            // Save updated vegetables data
+            saveVegetablesData(vegetablesData);
+        }
+
+        // Initialize: Load vegetables data on page load
+        let vegetablesData = {};
+        loadVegetablesData().then(data => {
+            if (data) {
+                vegetablesData = data;
+                displayVegetableDetails(data[0])
+                // Optionally, display initial data or perform other initialization tasks
+            }
+        }).catch(error => console.error('Failed to load vegetables data:', error));
+    </script>
+</body>
+</html>

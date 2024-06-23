@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vegetable Benefits</title>
+    <style>
+        /* Common styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 0;
+        }
+
+        #vegetable-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            height: fit-content;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        /* Vegetable cards */
+        .card {
+            width: 300px;
+            height: 100px;
+            background-color: #fff;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card h2 {
+            color: #007bff;
+            margin-bottom: 10px;
+        }
+
+        .card-footer {
+            text-align: left;
+            margin-top: 5px;
+            font-weight: bold;
+        }
+
+        .card-footer a {
+            color: #007bff;
+            text-decoration: none;
+            font-weight: bold;
+            border-bottom: 1px solid transparent;
+            transition: border-bottom-color 0.3s ease;
+        }
+
+        .card-footer a:hover {
+            border-bottom-color: #007bff;
+        }
+
+        /* Vegetable details page */
+        .form-section {
+            margin-bottom: 30px;
+        }
+
+        .form-section h2 {
+            color: #007bff;
+            margin-bottom: 10px;
+        }
+
+        .form-section img {
+            max-width: 100%;
+            display: block;
+            margin-bottom: 10px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-section p {
+            line-height: 1.6;
+        }
+
+        .emoji-link {
+            display: inline-block;
+            position: relative;
+            color: #007bff;
+            /* Link color */
+            text-decoration: none;
+        }
+        .emoji-link:hover{
+            text-decoration: none;
+        }
+
+        .emoji {
+            display: inline-block;
+            font-size: 1.2em;
+            /* Adjust size as needed */
+            transition: transform 0.3s ease-out;
+        }
+
+        .text {
+            display: inline-block;
+            margin-left: 5px;
+            /* Space between emoji and text */
+            vertical-align: middle;
+            /* Align vertically with emoji */
+            transition: color 0.1s ease-out;
+        }
+
+        .emoji-link:hover .emoji.normal {
+            transform: scale(1.2);
+        }
+
+        .emoji-link:hover .emoji.hover {
+            display: inline-block;
+        }
+
+        .emoji-link:hover .text {
+            color: #8ced5e;
+            text-decoration: none;
+            /* Change text color on hover */
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Vegetable Benefits</h1>
+
+    <div id="vegetable-container">
+        <!-- Vegetable cards will be inserted here dynamically -->
+    </div>
+
+    <script>
+        // Function to fetch JSON data
+        async function fetchVegetableBenefits() {
+            const response = await fetch('vegetableBenefits.json');
+            const data = await response.json();
+            return data;
+        }
+
+        // Function to display vegetable cards
+        async function displayVegetableCards() {
+            const vegetableContainer = document.getElementById('vegetable-container');
+            const vegetableBenefits = await fetchVegetableBenefits();
+
+            for (const vegetable in vegetableBenefits) {
+                if (vegetableBenefits.hasOwnProperty(vegetable)) {
+                    const card = document.createElement('div');
+                    card.classList.add('card');
+                    card.innerHTML = `
+                        <h2>${vegetable.toUpperCase()}</h2>
+                        <div class="card-footer">
+                         <a href="vegetable_details.html#${vegetable}" class="emoji-link">
+                           <span  class="emoji normal">😊</span>
+                           <span class="text">click to know benefits</span>
+                           
+                         </a>
+                        </div>
+                    `;
+
+                    card.addEventListener('mouseenter', function () {
+                        let emojiSpan = card.children[1].children[0].children[0]
+                        emojiSpan.textContent = '😮'; // Change to surprise emoji on hover
+                    });
+
+                    card.addEventListener('mouseleave', function () {
+                        let emojiSpan = card.children[1].children[0].children[0]
+
+                        emojiSpan.textContent = '😊'; // Change back to smiling emoji on mouse leave
+                    });
+                    vegetableContainer.appendChild(card);
+                }
+            }
+        }
+
+        // Call the function to display vegetable cards
+        displayVegetableCards();
+        // Optional JavaScript to toggle emojis on hover
+
+
+    </script>
+</body>
+
+</html>

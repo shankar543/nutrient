@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vegetable Details</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f0f0f0;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        .form-section {
+            margin-bottom: 20px;
+        }
+
+        .form-section h2 {
+            color: #007bff;
+            margin-bottom: 10px;
+        }
+
+        .form-section img {
+            max-width: 100%;
+            display: block;
+            margin-bottom: 10px;
+            border-radius: 8px;
+        }
+
+        .form-section p {
+            line-height: 1.6;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Vegetable Details</h1>
+    <!-- <a href="./editVeggie.html">Edit</a> -->
+    <div id="details-container">
+        <!-- Vegetable details will be inserted here dynamically -->
+    </div>
+
+    <script>
+        var vegetableBenefits = {}
+        // Function to fetch JSON data
+        async function fetchVegetableBenefits() {
+            const response = await fetch('vegetableBenefits.json');
+            const data = await response.json();
+            vegetableBenefits = data;
+
+        }
+
+        // Function to display detailed vegetable benefits
+        // async function displayVegetableDetails() {
+        //     const detailsContainer = document.getElementById('details-container');
+        //     await fetchVegetableBenefits()
+
+        //     const vegetableName = window.location.hash.substring(1); // Get vegetable name from URL hash
+
+        //     if (vegetableBenefits.hasOwnProperty(vegetableName)) {
+        //         const vegetable = vegetableBenefits[vegetableName];
+        //         for (const form in vegetable) {
+        //             if (vegetable.hasOwnProperty(form)) {
+        //                 const formBenefits = vegetable[form];
+        //                 const formSection = document.createElement('div');
+        //                 formSection.classList.add('form-section');
+        //                 formSection.innerHTML = `
+        //                     <h2>${form.charAt(0).toUpperCase() + form.slice(1)}</h2>
+
+        //                     <p>${formBenefits.benefits.join('<br>')}</p>
+        //                 `;
+        //                 formSection.prepend(<img src="https://img.freepik.com/free-photo/healthy-vegetables-wooden-table_1150-38014.jpg" alt="${'img'} ${form}" />)
+        //                 detailsContainer.appendChild(formSection);
+        //             }
+        //         }
+        //     } else {
+        //         detailsContainer.innerHTML = '<p>Vegetable details not found.</p>';
+        //     }
+        // }
+
+        // Call the function to display vegetable details
+
+        async function displayVegetableDetails() {
+            const detailsContainer = document.getElementById('details-container');
+            await fetchVegetableBenefits();
+
+            const vegetableName = window.location.hash.substring(1); // Get vegetable name from URL hash
+
+            if (vegetableBenefits.hasOwnProperty(vegetableName)) {
+                const vegetable = vegetableBenefits[vegetableName];
+
+                // Create image element
+                const imageElement = document.createElement('img');
+                imageElement.src = "https://img.freepik.com/free-photo/healthy-vegetables-wooden-table_1150-38014.jpg";
+                imageElement.alt = `${vegetableName} Image`;
+                imageElement.classList.add('vegetable-image');
+
+                // Prepend image to detailsContainer
+                detailsContainer.appendChild(imageElement);
+
+                // Iterate through each form of the vegetable
+                for (const form in vegetable) {
+                    if (vegetable.hasOwnProperty(form)) {
+                        const formBenefits = vegetable[form];
+                        const formSection = document.createElement('div');
+                        formSection.classList.add('form-section');
+                        formSection.innerHTML = `
+                    <h2>${form.charAt(0).toUpperCase() + form.slice(1)}</h2>
+                    <p>${formBenefits.benefits.join('<br>')}</p>
+                `;
+                        detailsContainer.appendChild(formSection);
+                    }
+                }
+            } else {
+                detailsContainer.innerHTML = '<p>Vegetable details not found.</p>';
+            }
+        }
+
+        displayVegetableDetails();
+        // <img src="${formBenefits.image_url}" alt="${vegetableName} ${form}" />
+    </script>
+</body>
+
+</html>
