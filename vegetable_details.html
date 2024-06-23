@@ -87,7 +87,8 @@
         }
       
             function searchitem(){
-            let keys = Object.keys(totaldata).filter(item=>item==serach_elm.value);
+                let keys = Object.keys(totaldata).filter(item => new RegExp(`/${serach_elm.value }/`).test(item));  
+
             vegetableBenefits ={};
              keys.forEach(key=>vegetableBenefits[key]=totaldata[key]);
              displayVegetableDetails() 
