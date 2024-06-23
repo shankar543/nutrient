@@ -11,12 +11,13 @@ app.use(bodyParser.json());
 
 // Endpoint to serve HTML page
 app.get('/', (req, res) => {
+    console.log("get call")
     res.sendFile(__dirname + '/index.html');
 });
 
 // Endpoint to get vegetables data
-app.get('/api/vegetables', (req, res) => {
-    fs.readFile('vegetables.json', 'utf8', (err, data) => {
+app.get('/vegetables', (req, res) => {
+    fs.readFile('./vegetableBenefits.json', 'utf8', (err, data) => {
         if (err) {
             console.error(err);
             res.status(500).json({ error: 'Failed to read vegetables.json' });
@@ -27,7 +28,7 @@ app.get('/api/vegetables', (req, res) => {
 });
 
 // Endpoint to save vegetables data
-app.post('/api/vegetables', (req, res) => {
+app.post('/vegetables', (req, res) => {
     const newData = JSON.stringify(req.body, null, 2);
     fs.writeFile('vegetables.json', newData, 'utf8', (err) => {
         if (err) {

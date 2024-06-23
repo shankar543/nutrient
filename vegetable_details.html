@@ -21,6 +21,7 @@
 
         .form-section {
             margin-bottom: 20px;
+            padding: 2em;
         }
 
         .form-section h2 {
@@ -38,25 +39,59 @@
         .form-section p {
             line-height: 1.6;
         }
+        .search-container{
+            margin: 1em auto;
+            width: 100%;
+            display: block;
+        }
+        .search-container > *{
+            display: inline-block;
+            position: relative;
+        }
+        .search-container>label{
+            color: #007bff;
+            font-weight: bold;
+        } 
+        .search-container>input{
+            border-radius: 3px;
+            border-color: #007bff;
+     
+        }
     </style>
 </head>
 
 <body>
+    
     <h1>Vegetable Details</h1>
+    <div class="search-container">
+        <label for="search">Search</label>
+        <input type="search" id="search-elm" class="search">
+        <button onclick="searchitem()">Get</button>
+    </div>
     <!-- <a href="./editVeggie.html">Edit</a> -->
     <div id="details-container">
         <!-- Vegetable details will be inserted here dynamically -->
     </div>
 
     <script>
-        var vegetableBenefits = {}
+        var vegetableBenefits = {};
+        let totaldata = {}
+        let serach_elm = document.getElementById("search-elm");
         // Function to fetch JSON data
         async function fetchVegetableBenefits() {
             const response = await fetch('vegetableBenefits.json');
             const data = await response.json();
+            totaldata = data;
             vegetableBenefits = data;
 
         }
+      
+            function searchitem(){
+            let keys = Object.keys(totaldata).filter(item=>item==serach_elm.value);
+            vegetableBenefits ={};
+             keys.forEach(key=>vegetableBenefits[key]=totaldata[key]);
+             displayVegetableDetails() 
+            }
 
         // Function to display detailed vegetable benefits
         // async function displayVegetableDetails() {
@@ -90,9 +125,13 @@
 
         async function displayVegetableDetails() {
             const detailsContainer = document.getElementById('details-container');
-            await fetchVegetableBenefits();
+            if(!Object.keys(vegetableBenefits).length){
+                await fetchVegetableBenefits();
+            }
+            
 
-            const vegetableName = window.location.hash.substring(1); // Get vegetable name from URL hash
+
+            const vegetableName = serach_elm.value || window.location.hash.substring(1); // Get vegetable name from URL hash
 
             if (vegetableBenefits.hasOwnProperty(vegetableName)) {
                 const vegetable = vegetableBenefits[vegetableName];
@@ -104,6 +143,10 @@
                 imageElement.classList.add('vegetable-image');
 
                 // Prepend image to detailsContainer
+                let name_elm=document.createElement("p");
+                name_elm.innerHTML=`<b>${vegetableName}</b>`
+                detailsContainer.innerHTML=""
+                detailsContainer.appendChild(name_elm)
                 detailsContainer.appendChild(imageElement);
 
                 // Iterate through each form of the vegetable
